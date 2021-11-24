@@ -6,7 +6,9 @@ int main()
 	using namespace std;
 	srand(time(NULL));
 	int a, b, d;
+	
 	string c;
+	
 	cout << "Введите число  от 1 до 31" << endl;
 	cin >> a;
 	cout << "Введите число  от 1 до 12" << endl;
@@ -152,7 +154,7 @@ int main()
 	}
 	cout << c << endl;
 	cout << "____________________________________________________________________" << endl;
-	
+
 	cout << "Введите  направление робота 1 - север, 2 - восток, 3 - юг, 4 - запад" << endl;
 	cin >> a;
 	cout << "Введите  команду для робота 0 - продолжить движение, 1 - поворот налево, 2 - поворот направо" << endl;
@@ -199,7 +201,7 @@ int main()
 		break;
 	}
 	cout << "____________________________________________________________________" << endl;
-	
+
 	string s1 = "учебных ", s2 = "учебное ", s3 = "занятий", s4 = "занятие", s5 = "занятия";
 	cout << "Введите количество учебных занятий от 10 до 40" << endl;
 	cin >> a;
@@ -297,11 +299,11 @@ int main()
 		break;
 	}
 	cout << "____________________________________________________________________" << endl;
-	
+
 	int n;
 	cout << "Введите число от 100 до 999" << endl;
 	cin >> n;
-	switch (n / 100) 
+	switch (n / 100)
 	{
 	case 1:
 		printf("сто ");
@@ -428,8 +430,8 @@ int main()
 
 	}
 	cout << "____________________________________________________________________" << endl;
+
 	
-	// Нужно сместить всё на 4!!!!!!
 	
 	string greens = "зеленой ", green = "зеленого ";
 	string reds = "красной ", red = "красного ";
@@ -450,52 +452,52 @@ int main()
 	{
 		undcik = chislo / 12 + 1;     // + 1 ТАК КАК ЦИКЛ УЖЕ ИДЁТ
 	}
-	yearname = chislo - (undcik - 1) * 12 ; 
+	yearname = chislo - (undcik - 1) * 12;
 
-	cout << undcik << " " <<yearname<< endl;
+	cout << undcik << " " << yearname << endl;
 
 	switch (yearname)
 	{
 	case 1:
-		aa = "крысы";
-		break;
-	case 2:
-		aa = "коровы";
-		break;
-	case 3:
-		aa = "тигра";
-		break;
-	case 4:
-		aa = "зайца";
-		break;
-	case 5:
-		aa = "дракона";
-		break;
-	case 6:
-		aa = "змеи";
-		break;
-	case 7:
-		aa = "лошади";
-		break;
-	case 8:
-		aa = "овцы";
-		break;
-	case 9:
-		aa = "обезьяны";
-		break;
-	case 10:
 		aa = "курицы";
 		break;
-	case 11:
+	case 2:
 		aa = "собаки";
 		break;
-	case 12:
+	case 3:
 		aa = "свиньи";
+		break;
+	case 4:
+		aa = "крысы";
+		break;
+	case 5:
+		aa = "коровы";
+		break;
+	case 6:
+		aa = "тигра";
+		break;
+	case 7:
+		aa = "зайца";
+		break;
+	case 8:
+		aa = "дракона";
+		break;
+	case 9:
+		aa = "змеи";
+		break;
+	case 10:
+		aa = "лошади";
+		break;
+	case 11:
+		aa = "овцы";
+		break;
+	case 12:
+		aa = "обезьяны";
 		break;
 
 	}
 	cout << aa << " " << endl;
-	if ((yearname == 3) || (yearname == 4) || (yearname == 5))
+	if ((yearname == 6) || (yearname == 7) || (yearname == 8))
 	{
 		switch (undcik)
 		{
@@ -506,7 +508,7 @@ int main()
 			cout << year << red << aa << endl;
 			break;
 		case 3:
-			cout << year << yellow<< aa << endl;
+			cout << year << yellow << aa << endl;
 			break;
 		case 4:
 			cout << year << white << aa << endl;
@@ -540,4 +542,4 @@ int main()
 	cout << "____________________________________________________________________" << endl;
 
 	return 0;
-}	
+}
