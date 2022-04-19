@@ -1,14 +1,20 @@
-#include <iostream>
+#include <iostream>#include <iostream>
 #include <ctime>
+#include <clocale>
+#include <cstdlib>
+#include <string>
+#include <Windows.h>
+
 int main()
 {
+	
 	setlocale(LC_ALL, "ru");
 	using namespace std;
 	srand(time(NULL));
 	int a, b, d;
-	
-	string c;
-	
+
+	string c,buk = " ";
+
 	cout << "Введите число  от 1 до 31" << endl;
 	cin >> a;
 	cout << "Введите число  от 1 до 12" << endl;
@@ -153,11 +159,28 @@ int main()
 		break;
 	}
 	cout << c << endl;
+	
 	cout << "____________________________________________________________________" << endl;
 
-	cout << "Введите  направление робота 1 - север, 2 - восток, 3 - юг, 4 - запад" << endl;
-	cin >> a;
-	cout << "Введите  команду для робота 0 - продолжить движение, 1 - поворот налево, 2 - поворот направо" << endl;
+	cout << "Введите  направление робота N - север, E - восток, S - юг, W - запад" << endl;
+	cin >> buk;
+	if (buk == "N")
+	{
+		a = 1;
+	}
+	else if (buk == "E")
+	{
+		a = 2;
+	}
+	else if (buk == "S")
+	{
+		a = 3;
+	}
+	else if (buk == "W")
+	{
+		a = 4;
+	}
+	cout << "Введите  команду для робота 0 - продолжить движение, 1 - поворот налево, -1 - поворот направо" << endl;
 	cin >> b;
 	if (b == 0)
 	{
@@ -174,7 +197,7 @@ int main()
 			d = 4;
 		}
 	}
-	else if (b == 2)
+	else if (b == -1)
 	{
 		if (a == 4)
 		{
@@ -201,7 +224,7 @@ int main()
 		break;
 	}
 	cout << "____________________________________________________________________" << endl;
-
+	
 	string s1 = "учебных ", s2 = "учебное ", s3 = "занятий", s4 = "занятие", s5 = "занятия";
 	cout << "Введите количество учебных занятий от 10 до 40" << endl;
 	cin >> a;
@@ -431,8 +454,8 @@ int main()
 	}
 	cout << "____________________________________________________________________" << endl;
 
-	
-	
+
+
 	string greens = "зеленой ", green = "зеленого ";
 	string reds = "красной ", red = "красного ";
 	string yellows = "желтой ", yellow = "желтого ";
@@ -540,6 +563,6 @@ int main()
 		}
 	}
 	cout << "____________________________________________________________________" << endl;
-
+	
 	return 0;
 }
